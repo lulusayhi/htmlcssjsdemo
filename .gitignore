@@ -2,6 +2,7 @@
 .settings
 .classpath
 .mymetadata
+pom.properties
 .settings/
 *.jar
 *.war
