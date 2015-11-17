@@ -6,7 +6,7 @@
 *.jar
 *.war
 *.iml
-target/
+target/*
 bin/
 build/
 .project
