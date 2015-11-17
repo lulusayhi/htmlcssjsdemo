@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>用户登录-值得投</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="css/basic.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/main.css">
+		<script language="JavaScript" src="js/prefixfree.min.js"></script>
+	</head>
+
+	<body>
+		<header class="mb-8">
+			<a href="javascript:history.back()" class="btn txt-left f-20 iconfont fl"><span>&#xe618;</span></a>
+			<div class="title fl">用户登录</div>
+			<a href="reg-step-1.html" class="btn txt-right f-16 fr"><span>注册</span></a>
+		</header>
+		<form id="form1" name="form1" method="post" action="">
+			<ul class="form-panel">
+				<li>
+					<input name="textfield" type="tel" placeholder="&#xe619; 手机号码" maxlength="11" required class="input-text-box iconfont" id="phone-number">
+					<!--<a href="javascript:void(0)" class="clear-txt iconfont" id="clear-phone-number">&#xe61b;</a>-->
+				</li>
+				<li>
+					<input name="textfield2" type="password" placeholder="&#xe61a; 登录密码" maxlength="18" required class="input-text-box iconfont" id="pwd">
+					<!--<a href="javascript:void(0)" class="clear-txt iconfont" id="clear-pwd">&#xe61b;</a>-->
+				</li>
+				<li>
+					<input type="submit" name="submit" value="马上登录" class="btn-big-yellow" id="btn-submit">
+				</li>
+				<li class="f-14"><a href="#" class="fr">忘记密码？</a><a href="reg-step-1.html" class="cl-yellow">新用户注册（送10元红包）</a></li>
+			</ul>
+		</form>
+		<nav class="bt-1">
+			<a href="index.html" class="nav-home"><span class="iconfont"></span><span class="nav-title">首页</span></a>
+			<a href="#" class="nav-news"><span class="iconfont"></span><span class="nav-title">看新闻</span></a>
+			<a href="login.html" class="nav-user current"><span class="iconfont"></span><span class="nav-title">我的账户</span></a>
+			<a href="#.html" class="nav-customer-service"><span class="iconfont"></span><span class="nav-title">咨询客服</span></a>
+		</nav>
+		<script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
+		<script type="text/javascript">
+			!window.jQuery && document.write('<script src="js/jquery.min-1.11.3.js"><\/script>');
+		</script>
+		<script src="layer.m/layer.m.js"></script>
+		<script type="text/javascript">
+			//表单验证
+			$(document).ready(function() {
+				$('#btn-submit').click(function() {
+					//手机号码
+					var isMobile = /^(13[0-9]|14[0-9]|15[0-9]|17[0-9]|18[0-9])[0-9]{8}$/;
+					if ($("#phone-number").val() == "") {
+						layer.open({
+							content: '手机号码不能为空',
+							time: 1.5
+						});
+						return false;
+					} else if ($('#phone-number').val() != "" && $('#phone-number').val().length < 11) {
+						layer.open({
+							content: '请输入11位的手机号码',
+							time: 1.5
+						});
+						return false;
+					} else if (!isMobile.test($("#phone-number").val())) {
+						layer.open({
+							content: '你输入的不是手机号码，请重输',
+							time: 1.5
+						});
+						return false;
+					}
+					//密码	
+					if ($("#pwd").val() == "") {
+						layer.open({
+							content: '登录密码不能为空',
+							time: 1.5
+						});
+						return false;
+					}
+					if ($("#pwd").val() != "" && $("#pwd").val().length < 6) {
+						layer.open({
+							content: '请输入6位以上的登录密码',
+							time: 1.5
+						});
+						return false;
+					}
+				})
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>新用户注册-值得投</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="css/basic.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/main.css">
+		<script language="JavaScript" src="js/prefixfree.min.js"></script>
+	</head>
+
+	<body>
+		<header class="mb-8">
+			<a href="javascript:history.back()" class="btn txt-left f-20 iconfont fl"><span>&#xe618;</span></a>
+			<div class="title fl">用户注册</div>
+			<a href="login.html" class="btn txt-right f-16 fr"><span>登录</span></a>
+		</header>
+		<form id="form1" name="form1" method="post" action="">
+			<ul class="form-panel">
+				<li>
+					<p class="f-16">短信验证码已发送至您的手机
+						<input type="submit" name="submit2" value="再次发送(59S)" class="btn-green-small btn-gray-small btn-get-verification-code" id="btn-get-verification-code">
+					</p>
+				</li>
+				<li>
+					<input name="textfield" type="tel" required maxlength="4" placeholder="&#xe61c; 短信验证码" class="input-text-box verification-code iconfont" id="verification-code">
+				</li>
+				<li>
+					<input name="textfield2" type="password" placeholder="&#xe61a; 登录密码，6-18位英文字母、数字或字符的组合" maxlength="18" required class="input-text-box iconfont" id="pwd">
+				</li>
+				<li>
+					<input type="text" name="textfield" placeholder="&#xe61d; 推荐人的邀请码（选填）" class="input-text-box iconfont" id="invitation-code">
+				</li>
+				<li>
+					<input type="submit" name="submit" value="下一步" class="btn-big-yellow" id="btn-submit">
+				</li>
+			</ul>
+		</form>
+		<nav class="bt-1">
+			<a href="index.html" class="nav-home"><span class="iconfont"></span><span class="nav-title">首页</span></a>
+			<a href="#" class="nav-news"><span class="iconfont"></span><span class="nav-title">看新闻</span></a>
+			<a href="login.html" class="nav-user current"><span class="iconfont"></span><span class="nav-title">我的账户</span></a>
+			<a href="#.html" class="nav-customer-service"><span class="iconfont"></span><span class="nav-title">咨询客服</span></a>
+		</nav>
+		<script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
+		<script type="text/javascript">
+			!window.jQuery && document.write('<script src="js/jquery.min-1.11.3.js"><\/script>');
+		</script>
+		<script src="layer.m/layer.m.js"></script>
+		<script language="JavaScript">
+			//表单验证
+			$(document).ready(function() {
+					$('#btn-submit').click(function() {
+						//短信验证码
+						if ($("#verification-code").val() == "") {
+							layer.open({
+								content: '短信验证码不能为空',
+								time: 1.5
+							});
+							return false;
+						}
+						if ($("#verification-code").val() != "" && $("#verification-code").val().length < 4) {
+							layer.open({
+								content: '请输入4位短信验证码',
+								time: 1.5
+							});
+						}
+						//密码	
+						if ($("#pwd").val() == "") {
+							layer.open({
+								content: '登录密码不能为空',
+								time: 1.5
+							});
+							return false;
+						}
+						if ($("#pwd").val() != "" && $("#pwd").val().length < 6) {
+							layer.open({
+								content: '请输入6位以上的登录密码',
+								time: 1.5
+							});
+							return false;
+						}
+					})
+				})
+				//倒计时
+			var wait = 60;
+			timeOut();
+			function timeOut() {
+				if (wait == 0) {
+					//倒计时结束恢复按钮
+					$('#btn-get-verification-code').removeAttr('disabled');
+					$('#btn-get-verification-code').removeClass("btn-gray-small");
+					$('#btn-get-verification-code').val("再次发送");
+				} else {
+					setTimeout(function() {
+						wait--;
+						//计时
+						$('#btn-get-verification-code').val("再次发送(" + wait + "S)");
+						timeOut();
+					}, 1000)
+				}
+			}
+		</script>
+	</body>
+
+</html>
