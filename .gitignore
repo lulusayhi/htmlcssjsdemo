@@ -1,13 +1,13 @@
 .idea
 .settings
+.
 .classpath
 .mymetadata
-pom.properties
 .settings/
 *.jar
 *.war
 *.iml
-target/*
+target/
 bin/
 build/
 .project
