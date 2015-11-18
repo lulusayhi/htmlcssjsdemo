@@ -1,0 +1,365 @@
+html {
+	font-size: 62.5%
+}
+
+body,
+div,
+ol,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+table,
+tr,
+th,
+td,
+dl,
+dt,
+dd,
+form,
+input,
+textarea,
+select,
+label,
+article,
+aside,
+footer,
+header,
+menu,
+nav,
+section,
+time,
+audio,
+video,
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal
+}
+
+article,
+aside,
+footer,
+header,
+hgroup,
+nav,
+section,
+audio,
+canvas,
+video,
+{
+	display: block;
+}
+
+body {
+	font-family: Helvetica, STHeiti, Droid Sans Fallback;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	line-height: 30px;
+	background: #fff
+	/*不显示点击默认的背景色*/
+}
+
+img {
+	border: 0;
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+input,
+select,
+textarea {
+	outline: 0;
+	-webkit-user-modify: read-write-plaintext-only;
+	/*去掉输入框聚焦时候的白色背景*/
+}
+
+
+
+a {
+	text-decoration: none;
+	background: transparent;
+}
+
+a:active,
+a:hover {
+	outline: 0;
+}
+
+textarea {
+	resize: none;
+}
+
+.fl {
+	float: left
+}
+
+.fr {
+	float: right
+}
+
+.clear-float {
+	overflow: hidden;
+	zom: 1
+}
+/*背景颜色*/
+
+.bg-255 {
+	background: #fff
+}
+
+/*color*/
+
+.cl-0 {
+	color: #000;
+}
+
+.cl-17 {
+	color: #111;
+}
+
+.cl-34 {
+	color: #222;
+}
+
+.cl-51 {
+	color: #333;
+}
+
+.cl-68 {
+	color: #444;
+}
+
+.cl-85 {
+	color: #555;
+}
+
+.cl-102 {
+	color: #666;
+}
+
+.cl-119 {
+	color: #777;
+}
+
+.cl-136 {
+	color: #888;
+}
+
+.cl-153 {
+	color: #999;
+}
+
+.cl-170 {
+	color: #aaa;
+}
+
+.cl-187 {
+	color: #bbb;
+}
+
+.cl-204 {
+	color: #ccc;
+}
+
+.cl-221 {
+	color: #ddd;
+}
+
+.cl-238 {
+	color: #eee;
+}
+
+.cl-255 {
+	color: #fff;
+}
+
+
+/*font-size*/
+
+.f-9 {
+	font-size: 0.9rem
+}
+
+.f-10 {
+	font-size: 1.0rem
+}
+
+.f-11 {
+	font-size: 1.1rem
+}
+
+.f-12 {
+	font-size: 1.2rem
+}
+
+.f-13 {
+	font-size: 1.3rem
+}
+
+.f-14 {
+	font-size: 1.4rem
+}
+
+.f-15 {
+	font-size: 1.5rem
+}
+
+.f-16 {
+	font-size: 1.6rem
+}
+
+.f-17 {
+	font-size: 1.7rem
+}
+
+.f-18 {
+	font-size: 1.8rem
+}
+
+.f-19 {
+	font-size: 1.9rem
+}
+
+.f-20 {
+	font-size: 2.0rem
+}
+
+.f-21 {
+	font-size: 2.1rem
+}
+
+.f-22 {
+	font-size: 2.2rem
+}
+
+.f-23 {
+	font-size: 2.3rem
+}
+
+.f-24 {
+	font-size: 2.4rem
+}
+
+.f-25 {
+	font-size: 2.5rem
+}
+.f-26 {
+	font-size: 2.6rem
+}
+.f-27 {
+	font-size: 2.7rem
+}
+.f-28 {
+	font-size: 2.8rem
+}
+.f-29 {
+	font-size: 2.9rem
+}
+.f-30 {
+	font-size: 3rem
+}
+
+.f-bold {
+	font-weight: bold;
+}
+
+.txt-left {
+	text-align: left !important;
+}
+
+.txt-right {
+	text-align: right !important;
+}
+
+.txt-center {
+	text-align: center !important;
+}
+
+.no-border {
+	border: none !important;
+}
+
+.mt-8 {
+	margin-top: 8px;
+}
+
+.mr-8 {
+	margin-right: 8px;
+}
+
+.mb-8 {
+	margin-bottom: 8px;
+}
+
+.ml-8 {
+	margin-left: 8px;
+}
+
+.mt-10 {
+	margin-top: 10px;
+}
+
+.mr-10 {
+	margin-right: 10px;
+}
+
+.mb-10 {
+	margin-bottom: 10px;
+}
+
+.ml-10 {
+	margin-left: 10px;
+}
+
+.mt-12 {
+	margin-top: 12px;
+}
+
+.mr-12 {
+	margin-right: 12px;
+}
+
+.mb-12 {
+	margin-bottom: 12px;
+}
+
+.ml-12 {
+	margin-left: 12px;
+}
+
+.pt-10 {
+	padding-top: 10px;
+}
+
+.pr-10 {
+	padding-right: 10px;
+}
+
+.pb-10 {
+	padding-bottom: 10px;
+}
+
+.pl-10 {
+	padding-left: 10px;
+}
